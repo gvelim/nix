@@ -15,6 +15,27 @@
         name = "simple";
         src = ./.;
 	nvim = nixvim.legacyPackages.${system}.makeNixvim {
+	plugins.treesitter = {
+	  enable = true;
+	  settings = {
+	     highlight.enable = true;
+	     auto_install = true;
+	  };
+	  grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+	  bash
+          json
+          lua
+          make
+          markdown
+          nix
+          regex
+          toml
+          vim
+          vimdoc
+          xml
+          yaml
+	  ];
+	  };
 	  plugins.lsp.enable = true;
 	  plugins.lsp.servers.nixd = {
 	  	enable = true;
