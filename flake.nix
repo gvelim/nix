@@ -8,9 +8,9 @@
     };
  };
 
-  outputs = { self, nixpkgs, flake-utils, nixvim } : 
+  outputs = { self, nixpkgs, flake-utils, nixvim } :
     flake-utils.lib.eachDefaultSystem (system :
-    	let 
+    	let
 			pkgs = nixpkgs.legacyPackages.${system};
 			name = "simple";
 			src = ./.;
@@ -67,7 +67,7 @@
 			};
 			devShells.default = with pkgs ; mkShell {
 				buildInputs = [
-					nixd 
+					nixd
 					nvim
 				];
 			};
