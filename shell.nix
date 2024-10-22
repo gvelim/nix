@@ -10,8 +10,12 @@ let
     }
   ) {};
 in
-  pkgs.runCommand "dummy" {
+  pkgs.runCommand "nvim-lsp" {
     # add here the Derivation as a input dependency
     # to the shell creation process
-    buildInputs = [ pkgs.nixd nvim-lsp ];
+    buildInputs = [
+      pkgs.nerdfonts
+      pkgs.nixd 
+      nvim-lsp 
+    ];
   } ""
