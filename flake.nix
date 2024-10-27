@@ -67,6 +67,7 @@
 			};
 			devShells.default = with pkgs ; mkShell {
 				buildInputs = [
+          nodejs
 					nixd
 					nvim
 				];

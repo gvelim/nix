@@ -16,6 +16,7 @@ in
     buildInputs = [
       pkgs.nerdfonts
       pkgs.nixd 
+      pkgs.nodejs
       nvim-lsp 
     ];
   } ""
