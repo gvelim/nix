@@ -10,6 +10,7 @@ pkgs.mkShellNoCC {
     starship
     hstr
   ];
+  GEMINI_API_KEY = builtins.getEnv "GEMINI_API_KEY";
   HSTR_CONFIG = "hicolor";
   shellHook = ''
     eval "$(starship init bash)"
