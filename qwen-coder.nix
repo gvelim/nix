@@ -13,14 +13,14 @@
 }:
 
 buildNpmPackage (finalAttrs: {
-  pname = "gemini-cli";
-  version = "unstable";
+  pname = "qwen-code";
+  version = "0.0.1";
 
   src = fetchFromGitHub {
-    owner = "qwen";
+    owner = "gvelim";
     repo = "qwen-code";
     # Currently there's no release tag
-    rev = "01d88eef4d2def55b4b651e2a7821d8d4b30f52e";
+    rev = "08afa0b87e5d6be4d2bfdce857f434b4ebac921d";
     hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
   };
 
@@ -78,10 +78,10 @@ buildNpmPackage (finalAttrs: {
 
   meta = {
     description = "AI agent that brings the power of Gemini directly into your terminal";
-    homepage = "https://github.com/google-gemini/gemini-cli";
+    homepage = "https://github.com/qwen/qwen-code";
     license = lib.licenses.asl20;
     maintainers = with lib.maintainers; [ donteatoreo ];
     platforms = lib.platforms.all;
-    mainProgram = "gemini";
+    mainProgram = "qwen";
   };
 })

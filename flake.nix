@@ -60,7 +60,7 @@
 				};
 			};
 		in {
-		    packages.default = pkgs.callPackage ./default.nix { };
+		    packages.default = pkgs.callPackage ./qwen-coder.nix { };
 		    packages.test = derivation {
 				inherit system name src;
 				builder = with pkgs; "${bash}/bin/bash";
