@@ -60,7 +60,8 @@
 				};
 			};
 		in {
-			packages.default = derivation {
+		    packages.default = pkgs.callPackage ./default.nix { };
+		    packages.test = derivation {
 				inherit system name src;
 				builder = with pkgs; "${bash}/bin/bash";
 				args = [ "-c" "echo foo > $out" ];
