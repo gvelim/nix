@@ -60,7 +60,7 @@
 				};
 			};
 		in {
-		    packages.default = pkgs.callPackage ./qwen-coder.nix { };
+		    packages.default = pkgs.callPackage ./qwen-code.nix { };
 		    packages.test = derivation {
 				inherit system name src;
 				builder = with pkgs; "${bash}/bin/bash";
@@ -71,7 +71,7 @@
           nodejs
 					nixd
 					nvim
-					(pkgs.callPackage ./qwen-coder.nix { })
+					(pkgs.callPackage ./qwen-code.nix { })
 				];
 			};
 		}
