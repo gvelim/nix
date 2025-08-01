@@ -71,6 +71,7 @@
           nodejs
 					nixd
 					nvim
+					(pkgs.callPackage ./qwen-coder.nix { })
 				];
 			};
 		}
