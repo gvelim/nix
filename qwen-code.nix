@@ -13,7 +13,7 @@ buildNpmPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "gvelim";
     repo = "qwen-code";
-    rev = "e082e301bf2e779435237aab56927b204ead5d2e";
+    rev = "4db2fc9ed6a6112c0a6cd94ea40a8c6e076004de";
     hash = "sha256-qX2ssemIt3Ijl9GxCgurcXg5B5ZC2D6cRjGqD9G8Ksg=";
   };
 
