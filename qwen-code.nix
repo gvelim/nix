@@ -8,7 +8,7 @@
 
 buildNpmPackage (finalAttrs: {
   pname = "qwen-code";
-  version = "unstable-2025-07-24";
+  version = "unstable-2025-08-02";
 
   src = fetchFromGitHub {
     owner = "gvelim";
