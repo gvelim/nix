@@ -68,11 +68,12 @@
 			};
 			devShells.default = with pkgs ; mkShell {
 				buildInputs = [
-          nodejs
+                    nodejs
 					nixd
-					nvim
+					nil
 					(pkgs.callPackage ./qwen-code.nix { })
 				];
+					#nvim
 			};
 		}
 	);
